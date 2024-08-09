@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginxdeployment
+  name: nginxdeployment2
   namespace: kataokanamespace9
   labels:
     app: eks-sample-linux-app
