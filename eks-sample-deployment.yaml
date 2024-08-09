@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-　annotations:
-    argocd-image-updater.argoproj.io/write-back-method: "argocd"
-    argocd-image-updater.argoproj.io/image-list: "public.ecr.aws/nginx/nginx:1.23"
-    argocd-image-updater.argoproj.io/api.update-strategy: "latest"
+annotations:
+    argocd-image-updater.argoproj.io/write-back-method: "argocd"  # argocd または git を選択
+    argocd-image-updater.argoproj.io/image-list: "public.ecr.aws/nginx/nginx:1.23"  # コンテナイメージの URL
+    argocd-image-updater.argoproj.io/api.update-strategy: "latest"  # イメージの更新戦略
   name: nginxdeployment2
   namespace: kataokanamespace9
   labels:
