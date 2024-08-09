@@ -6,6 +6,7 @@ metadata:
   labels:
     app: eks-sample-linux-app
 spec:
+  type: LoadBalancer  # LoadBalancerタイプに設定
   selector:
     app: eks-sample-linux-app
   ports:
