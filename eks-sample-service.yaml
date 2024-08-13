@@ -5,7 +5,7 @@ annotations:
     argocd-image-updater.argoproj.io/image-list: "public.ecr.aws/nginx/nginx:1.23"
     argocd-image-updater.argoproj.io/api.update-strategy: "latest"
 metadata:
-  name: nginxservice2
+  name: nginxservice1
   namespace: kataokanamespace9
   labels:
     app: eks-sample-linux-app

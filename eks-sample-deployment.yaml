@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: eks-sample-deployment
+  name: eks-sample-deployment1
 spec:
   replicas: 2
   selector:
@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: eks-sample-service
+  name: eks-sample-service1
   annotations:
     argocd-image-updater.argoproj.io/write-back-method: "argocd"  # argocd または git を選択
     argocd-image-updater.argoproj.io/image-list: "public.ecr.aws/nginx/nginx:1.23"  # コンテナイメージの URL
