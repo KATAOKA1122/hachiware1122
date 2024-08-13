@@ -1,18 +1,18 @@
 apiVersion: v1
 kind: Service
 annotations:
-    argocd-image-updater.argoproj.io/write-back-method: "argocd"
-    argocd-image-updater.argoproj.io/image-list: "public.ecr.aws/nginx/nginx:1.23"
-    argocd-image-updater.argoproj.io/api.update-strategy: "latest"
+  argocd-image-updater.argoproj.io/write-back-method: "argocd"
+  argocd-image-updater.argoproj.io/image-list: "public.ecr.aws/nginx/nginx:1.23"
+  argocd-image-updater.argoproj.io/api.update-strategy: "latest"
 metadata:
   name: nginxservice1
   namespace: kataokaap9
   labels:
-    app: eks-sample-linux-app
+    app: eks-sample
 spec:
-  type: LoadBalancer  # LoadBalancerタイプに設定
+  type: LoadBalancer
   selector:
-    app: eks-sample-linux-app
+    app: eks-sample
   ports:
     - protocol: TCP
       port: 80
