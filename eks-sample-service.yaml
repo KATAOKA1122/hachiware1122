@@ -6,7 +6,7 @@ annotations:
     argocd-image-updater.argoproj.io/api.update-strategy: "latest"
 metadata:
   name: nginxservice1
-  namespace: kataokanamespace9
+  namespace: kataokaap9
   labels:
     app: eks-sample-linux-app
 spec:
