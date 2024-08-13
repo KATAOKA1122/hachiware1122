@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: eks-sample-container
-        image: amazon/amazon-ecs-sample
+        image: public.ecr.aws/nginx/nginx:1.23
         ports:
         - containerPort: 80
+
 
