@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-image-updater
+  namespace: kataokaargocd9
+  labels:
+    app.kubernetes.io/name: argocd-image-updater
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: 'https://argoproj.github.io/argo-helm'
+    targetRevision: 0.6.0
+    helm:
+      values: |
+        config:
+          logLevel: "info"
+    chart: argocd-image-updater
+  destination:
+    server: 'https://F2EE73ADBC869538138F316C1C9BDC11.gr7.ap-northeast-1.eks.amazonaws.com'
+    namespace: kataokaargocd9
+  syncPolicy:
+    automated:
+      prune: true
