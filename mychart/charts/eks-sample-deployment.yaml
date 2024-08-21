@@ -6,7 +6,6 @@ metadata:
   labels:
     app: eks-sample-linux-app
 spec:
-  serviceAccountName: kataokaaws-load-balancer-controller9
   replicas: 2
   selector:
     matchLabels:
@@ -16,6 +15,7 @@ spec:
       labels:
         app: eks-sample-linux-app
     spec:
+      serviceAccountName: kataokaaws-load-balancer-controller9
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
