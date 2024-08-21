@@ -6,7 +6,6 @@ metadata:
   labels:
     app: eks-sample-linux-app
 spec:
-  serviceAccountName: kataokaaws-load-balancer-controller9
   selector:
     app: eks-sample-linux-app
   ports:
