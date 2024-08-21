@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: eks-sample-linux-service
+  namespace: kataokaap9
+  labels:
+    app: eks-sample-linux-app
+spec:
+  serviceAccountName: kataokaaws-load-balancer-controller9
+  selector:
+    app: eks-sample-linux-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
