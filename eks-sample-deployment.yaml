@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: eks-sample-deployment1
-  namespace: kataokaargocd3
+  namespace: kataokaap3
 spec:
   replicas: 2
   selector:
